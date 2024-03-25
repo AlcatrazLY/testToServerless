@@ -1,6 +1,6 @@
 org: tmendez
-app: server-schedule
-service: cron-service
+app: express-test
+service: express-service
 
 frameworkVersion: '3'
 
