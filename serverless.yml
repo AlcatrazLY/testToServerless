@@ -1,0 +1,24 @@
+org: tmendez
+app: server-schedule
+service: cron-service
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  lambdaHashingVersion: '20201221'
+  timeout: 120
+
+functions:
+  api:
+    handler: handler.handler
+    environment:
+
+    events:
+      - http:
+          path: /
+          method: ANY
+      - http:
+          path: /{proxy+}
+          method: ANY
