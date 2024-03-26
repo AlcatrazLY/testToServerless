@@ -4,7 +4,7 @@ import express from 'express';
 const app = express();
 
 // Definir una ruta para devolver "Hola Mundo"
-app.get('/', (req, res) => {
+app.get('/', (_, res) => {
   res.send('¡Hola Mundo!');
 });
 
@@ -15,7 +15,7 @@ app.listen(PORT, () => {
 });
 
 // Exportar la función handler
-export const handler = async (event, context) => {
+export const handler = async () => {
   // Retornar una respuesta por defecto, ya que el servidor Express manejará las solicitudes HTTP
   return {
     statusCode: 200,
