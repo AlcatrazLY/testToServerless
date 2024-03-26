@@ -1,5 +1,6 @@
-// Importar Express
-const express = require('express');
+// Importar Express 
+//Importar express con ecmaScript 6 
+import express from 'express';
 
 // Crear una aplicación de Express
 const app = express();
