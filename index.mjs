@@ -1,5 +1,3 @@
-// Importar Express 
-//Importar express con ecmaScript 6 
 import express from 'express';
 
 // Crear una aplicación de Express
@@ -15,3 +13,13 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Servidor escuchando en el puerto ${PORT}`);
 });
+
+// Exportar la función handler
+export const handler = async (event, context) => {
+  // Retornar una respuesta por defecto, ya que el servidor Express manejará las solicitudes HTTP
+  return {
+    statusCode: 200,
+    body: 'Servidor Express en ejecución',
+  };
+};
+
