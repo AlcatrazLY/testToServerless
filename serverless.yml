@@ -14,7 +14,8 @@ functions:
   api:
     handler: index.handler
     environment:
-
+      SENDGRID_API_KEY: ${param:SENDGRID_API_KEY}
+      SENDGRID_API_PASS: ${param:SENDGRID_API_PASS}
     events:
       - http:
           path: /
