@@ -4,11 +4,11 @@ const serverless = require('serverless-http');
 
 
 
-
+/*
 exports.handler = async () => {
   app.initServer();
 };
+*/
 
 
-
-//exports.handler = serverless(app.initServer());
+module.exports.handler = serverless(app);
