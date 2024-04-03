@@ -42,3 +42,12 @@ exports.test = async (req, res) => {
      console.log(error, 'error');
     }
  }
+
+ exports.test = async (req, res) => {
+    try {
+     return  res.send('Hello world');
+    } catch (error) {
+     console.log(error, 'error');
+    }
+ }
+ 
