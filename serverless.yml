@@ -24,5 +24,4 @@ functions:
           path: /{proxy+}
           method: ANY
 plugins:
-  - serverless-http
-  
+  - serverless-offline
