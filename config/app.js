@@ -6,6 +6,7 @@ app.use(bodyParser.json());
 const taskRoutes = require('../routes/taskRoutes');
 
 app.use('/tasks', taskRoutes);
+
 /*
 exports.initServer =() => {
     app.listen(3000, () => {
@@ -13,3 +14,4 @@ exports.initServer =() => {
     });
 }
 */
+
