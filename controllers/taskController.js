@@ -21,7 +21,7 @@ exports.startService = (req, res) => {
           }
     }
 
-    res.send('Servicio de envío de correos iniciado');
+    return res.send('Servicio de envío de correos iniciado');
 };
 
 exports.stopService = (req, res) => {
