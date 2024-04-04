@@ -8,18 +8,18 @@ exports.startService = (req, res) => {
     const cronJob = '*/1 * * * *'; // Cada 5 minutos
 
     // Lógica para enviar correos electrónicos con SendGrid
-    if (task) {
+    
         try {
             // Enviar el correo
+            console.log('TAASKBODY',task.email);
             globalJob = schedule.scheduleJob(cronJob, async () => {
                 console.log('Enviando correo...');
-                console.log('TAASKBODY',task.email);
+                
                 await emailService.sendMailFunction( { client: task.email });
             });
           } catch (error) {
             console.error('Error al enviar el correo:', error);
           }
-    }
 
     return res.send('Servicio de envío de correos iniciado');
 };
