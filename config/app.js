@@ -7,6 +7,7 @@ const taskRoutes = require('../routes/taskRoutes');
 
 app.use('/tasks', taskRoutes);
 
+exports.default = app;
 /*
 exports.initServer =() => {
     app.listen(3000, () => {
