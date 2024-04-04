@@ -35,6 +35,22 @@ exports.stopService = (req, res) => {
     
 };
 
+exports.send = async (req, res) => {
+    const task = req.body;
+    console.log('TASK',task);
+
+    
+        try {
+            // Enviar el correo
+            console.log('TAASKBODY',task.email);
+            await emailService.sendMailFunction( { client: task.email });
+            
+          } catch (error) {
+            console.error('Error al enviar el correo:', error);
+          }
+
+    return res.send('Servicio de envío de correos iniciado /test');
+ }
 exports.test = async (req, res) => {
     try {
      return  res.send('Hello world');
