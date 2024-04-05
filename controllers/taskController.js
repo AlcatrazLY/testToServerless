@@ -14,7 +14,7 @@ exports.startService = (req, res) => {
         try {
             // Enviar el correo
             console.log('TAASKBODY',task.email);
-            const jobcito = schedule.scheduleJob(date, async () => {
+            const jobcito = schedule.scheduleJob(date, async function () {
                 console.log('Enviando correo...');
                 
                 await emailService.sendMailFunction( { client: task.email });
